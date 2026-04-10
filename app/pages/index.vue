@@ -1,7 +1,7 @@
 <script setup>
-definePageMeta({
-  middleware: () => navigateTo('/editor')
-})
+if (process.client) {
+  window.location.href = '/editor'
+}
 </script>
 
 <template></template>
